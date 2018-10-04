@@ -1,0 +1,437 @@
+Test Case 1:
+Single File
+
+Input:
+ ./invertedIndex output.txt testDir/testCase0
+
+
+Output:
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileIndex>
+ 
+    <word text="cat23">
+     
+	  <file name="testcase0">1</file>
+     
+   </word>
+        
+   <word text="hello">
+               
+	 <file name="testcase0">1</file>
+   
+   </word>
+       
+ <word text="is">
+ 
+               <file name="testcase0">2</file>
+
+  </word>
+ 
+ <word text="my">
+
+                <file name="testcase0">1</file>
+        
+ </word>
+        
+<word text="name">
+ 
+               <file name="testcase0">1</file>
+        
+</word>
+
+</fileIndex>
+
+
+
+Test Case 2:
+Directory with multiple files
+
+Input:
+ ./invertedIndex output.txt testDir/testCase2
+
+
+Output:
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileIndex>
+       
+ <word text="example10">
+
+                <file name="a.txt">1</file>
+
+                <file name="a0">2</file>
+
+                <file name="aa">1</file>
+
+                <file name="aaa">2</file>
+
+                <file name="aaa.txt">2</file>
+
+                <file name="bb">1</file>
+ 
+               <file name="zz">1</file>
+       
+ </word>
+       
+ <word text="example2">
+ 
+               <file name="a">1</file>
+ 
+               <file name="aa">1</file>
+ 
+               <file name="aaa">1</file>
+
+</word>
+       
+ <word text="example30">
+
+                <file name="1">1</file>
+
+                <file name="a.txt">1</file>
+
+                <file name="aaa">1</file>
+
+                <file name="b">1</file>
+       
+ </word>
+        
+<word text="example3a">
+
+                <file name="a">1</file>
+
+                <file name="aa">2</file>
+ 
+               <file name="aaa">1</file>
+        
+</word>
+
+</fileIndex>
+
+
+
+Test Case 3:
+Empty File or Directory
+
+Input:
+./invertedIndex output.txt testDir/testCase3
+
+
+Output:
+
+
+
+Test Case 4:
+File or Directory that does not exit
+
+Input:
+ ./invertedIndex output.txt testDir/ballon
+
+
+Output:
+
+
+
+Test Case 5:
+Directory nested inside another directory 
+(example in assignment description)Input:
+ ./invertedIndex output.txt testDir/testCase5
+
+
+Output: 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileIndex>
+        
+<word text="a">
+
+                <file name="baa">1</file>
+
+                <file name="boo">1</file>
+       
+ </word>
+       
+ <word text="baa">
+                
+<file name="baa">1</file>
+        
+</word>
+       
+ <word text="boo">
+
+                <file name="boo">1</file>
+        
+</word>
+        
+<word text="cat">
+
+                <file name="baa">3</file>
+        
+</word>
+        
+<word text="dog">
+
+                <file name="boo">1</file>
+        
+</word>
+        
+<word text="named">
+
+                <file name="baa">1</file>
+ 
+               <file name="boo">2</file>
+       
+ </word>
+
+</fileIndex>
+
+
+
+Test Case 6:
+Directory of only directories
+
+Input:
+ ./invertedIndex output.txt testDir/testCase6
+
+
+Output:
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileIndex>
+        
+<word text="big">
+
+                <file name="testx.txt">1</file>
+
+                <file name="testy.txt">1</file>
+
+                <file name="testz.txt">1</file>
+        
+</word>
+
+</fileIndex>
+
+
+
+Test Case 7:
+Directory that contains a directory of directories
+
+Input:
+ ./invertedIndex output.txt testDir
+
+
+Output: 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileIndex>
+        
+<word text="a">
+
+                <file name="baa">1</file>
+
+                <file name="boo">1</file>
+        
+</word>
+        
+<word text="baa">
+
+                <file name="baa">1</file>
+        
+</word>
+        
+<word text="big">
+
+                <file name="testx.txt">1</file>
+
+                <file name="testy.txt">1</file>
+
+                <file name="testz.txt">1</file>
+        
+</word>
+       
+ <word text="boo">
+
+                <file name="boo">1</file>
+        
+</word>
+        
+<word text="cat">
+
+                <file name="baa">3</file>
+        
+</word>
+        
+<word text="cat23">
+
+                <file name="testcase0">1</file>
+        
+</word>
+        
+<word text="dog">
+
+                <file name="boo">1</file>
+        
+</word>
+        
+<word text="example10">
+
+                <file name="a.txt">1</file>
+
+                <file name="a0">2</file>
+
+                <file name="aa">1</file>
+ 
+               <file name="aaa">2</file>
+
+                <file name="aaa.txt">2</file>
+
+                <file name="bb">1</file>
+
+                <file name="zz">1</file>
+
+</word>
+
+ <word text="example2">
+
+                <file name="a">1</file>
+
+                <file name="aa">1</file>
+ 
+               <file name="aaa">1</file>
+        
+</word>
+       
+ <word text="example30">
+
+                <file name="1">1</file>
+
+                <file name="a.txt">1</file>
+
+                <file name="aaa">1</file>
+
+                <file name="b">1</file>
+        
+</word>
+        
+<word text="example3a">
+
+                <file name="a">1</file>
+
+                <file name="aa">2</file>
+
+                <file name="aaa">1</file>
+        
+</word>
+        
+<word text="hello">
+
+                <file name="testcase0">1</file>
+
+                <file name="text1.txt">3</file>
+        
+</word>
+       
+ <word text="is">
+
+                <file name="testcase0">2</file>
+ 
+               <file name="text1.txt">3</file>
+        
+</word>
+       
+ <word text="my">
+
+                <file name="testcase0">1</file>
+
+                <file name="text1.txt">3</file>
+        
+</word>
+       
+ <word text="name">
+
+                <file name="testcase0">1</file>
+
+                <file name="text1.txt">3</file>
+        
+</word>
+       
+ <word text="named">
+
+                <file name="baa">1</file>
+
+                <file name="boo">2</file>
+        
+</word>
+        
+<word text="russ">
+ 
+               <file name="text1.txt">2</file>
+       
+ </word>
+        
+<word text="russell">
+
+                <file name="text1.txt">1</file>
+        
+</word>
+
+</fileIndex>
+ 
+                        
+
+
+Test Case 8:
+Directory of of directories that only contain files with the same name
+
+
+Input: ./invertedIndex output.txt testDir/testCase9
+
+
+Output:
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileIndex>
+        
+<word text="hello">
+
+                <file name="text1.txt">3</file>
+        
+</word>
+        
+<word text="is">
+                
+                 <file name="text1.txt">3</file>
+       
+ </word>
+       
+ <word text="my">
+
+                <file name="text1.txt">3</file>
+        
+</word>
+        
+<word text="name">
+
+                <file name="text1.txt">3</file>
+       
+ </word>
+        
+<word text="russ">
+               
+                <file name="text1.txt">2</file>
+        
+</word>
+        
+<word text="russell">
+               
+                   <file name="text1.txt">1</file>
+        
+</word>
+
+</fileIndex>
+
+
+
+Test Case 9:
+        100s of directories that contain 100s of directories
+
