@@ -1,7 +1,6 @@
 0. Introduction
-CS 214: Systems Programming, Spring 2018 Assignment 0: String Sorting
-In this assignment, you will practice programming with C pointers and using dynamic memory. Manipulation of dynamic memory and the pointer construct are two defining characteristics of the C language. They are powerful tools but can be fiddly to work with. For your first assignment, you will get a little practice working with both.
-You will write a rather simple program to sort words given in a single input string. Your code will take a single, long input string that contains all words to be sorted, break them out into individual strings, sort them, and output them one per line in descending alphabetical order.
+String Sorting
+The code will take a single, long input string that contains all words to be sorted, break them out into individual strings, sort them, and output them one per line in descending alphabetical order.
 You will not know the length of the input string or its constituent strings beforehand, or how many there are, so you will not know how much memory to allocate or how many pointers you'll need to handle the input string. These are two fundamental issues you must
 consider.
 
